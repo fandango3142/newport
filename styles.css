@@ -1,90 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Header -->
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+/* Colors */
+:root {
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --primary-color: #5c6bc0;
+    --accent-color: #f06292;
+    --white: #fff;
+}
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Showcasing my projects and experiences.</p>
-        <div class="cta-buttons">
-            <a href="#projects" class="button">View Projects</a>
-            <a href="#contact" class="button">Contact Me</a>
-        </div>
-    </section>
+/* Header */
+header {
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
 
-    <!-- Twin Divs Section -->
-    <section class="twin-section">
-        <div class="twin-image">
-            <img src="your-image.jpg" alt="About Image">
-        </div>
-        <div class="twin-info">
-            <h3>About Me</h3>
-            <p>A short description about you and your background.</p>
-        </div>
-    </section>
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
 
-    <!-- Carousel Section -->
-    <section class="carousel">
-        <div class="carousel-item">
-            <img src="carousel-image1.jpg" alt="Project 1">
-            <a href="#project1" class="button">Learn More</a>
-        </div>
-        <div class="carousel-item">
-            <img src="carousel-image2.jpg" alt="Project 2">
-            <a href="#project2" class="button">Learn More</a>
-        </div>
-        <div class="carousel-item">
-            <img src="carousel-image3.jpg" alt="Project 3">
-            <a href="#project3" class="button">Learn More</a>
-        </div>
-    </section>
+header nav a {
+    color: var(--white);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    <!-- Blog Section -->
-    <section class="blog">
-        <h3>Blog Posts</h3>
-        <div class="blog-posts">
-            <article class="blog-post">
-                <h4>Blog Title 1</h4>
-                <p>Blog summary or excerpt goes here.</p>
-            </article>
-            <!-- Repeat 5 more blog post articles here -->
-        </div>
-    </section>
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
+    padding: 4rem 1rem;
+    text-align: center;
+}
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
-        </div>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
 
-</body>
-</html>
+.cta-buttons .button {
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Twin Section */
+.twin-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--light-color);
+}
+
+.twin-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.twin-info {
+    max-width: 500px;
+    margin-left: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Carousel */
+.carousel {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--dark-color);
+    color: var(--white);
+}
+
+.carousel h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carousel-item {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+/* Blog */
+.blog {
+    padding: 2rem;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.blog h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.blog-posts {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.blog-post {
+    background-color: var(--white);
+    padding: 1rem;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 5px;
+    color: var(--dark-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+footer a {
+    color: var(--white);
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
